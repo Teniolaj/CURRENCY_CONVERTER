@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <title>Currency Converter</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="big-container">
+      <div class="container">
+        <form action="#" class="form">
+          <header>Currency converter</header>
+          <p>Enter Amount</p>
+          <input type="number" />
+
+          <div class="currency-container">
+            <div id="from">
+              <p>From</p>
+              <div class="left">
+                <img src="https://flagsapi.com/US/flat/64.png" alt="" />
+                <select name="fromCountry" ></select>
+              </div>
+            </div>
+
+            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+
+            <div id="to">
+              <p>To</p>
+              <div class="right">
+                <img src="https://flagsapi.com/BE/flat/64.png" alt="" />
+                <select name="toCountry" ></select>
+              </div>
+            </div>
+          </div>
+
+          <p id="currency-display">1 USD = 20 JPY</p>
+
+          
+            <button type="submit" id="submit">Convert Currency</button>
+            <button type="reset">Clear</button>
+          
+
+        </form>
+      </div>
+
+      <div class="container1">
+        <h3>Currency exchange Graph</h3>
+
+        <div class="dateContainer">
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate">
+        </div>
+
+        <div class="dateContainer">
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate">
+        </div>
+
+        <canvas id="exchangeRateChart"></canvas>
+
+
+        <button id="fetchData">Show Graph</button>
+    
+        
+      </div>
+
+      <div class="container2">
+        <h3>Exchange Rates</h3>
+        <table id="ratesTable" border="1">
+          <thead>
+              <tr>
+                  <th>Currency</th>
+                  <th>Rate</th>
+                  <th>USD</th>
+              </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+      </table>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
